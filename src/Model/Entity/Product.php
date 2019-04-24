@@ -21,17 +21,17 @@ class Product
      */
     private $price;
 
-    /**
-     * @param int $id
-     * @param string $name
-     * @param float $price
-     */
-    public function __construct(int $id, string $name, float $price)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->price = $price;
-    }
+//    /**
+//     * @param int $id
+//     * @param string $name
+//     * @param float $price
+//     */
+//    public function __construct(int $id, string $name, float $price)
+//    {
+//        $this->id = $id;
+//        $this->name = $name;
+//        $this->price = $price;
+//    }
 
     /**
      * @return int
@@ -67,5 +67,35 @@ class Product
             'name' => $this->name,
             'price' => $this->price,
         ];
+    }
+
+    /**
+     * @param int $id
+     * @return Product
+     */
+    public function setId(int $id): Product
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @param string $name
+     * @return Product
+     */
+    public function setName(string $name): Product
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @param float $price
+     * @return Product
+     */
+    public function setPrice(float $price): Product
+    {
+        $this->price = $price;
+        return $this;
     }
 }
