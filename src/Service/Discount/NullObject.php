@@ -4,14 +4,14 @@ declare(strict_types = 1);
 
 namespace Service\Discount;
 
-class NullObject implements IDiscount
+class NullObject extends Discount
 {
     /**
      * @inheritdoc
      */
     public function getDiscount(): float
     {
-        // Скидка отсутствует
+        parent::getDiscount();
         return 0;
     }
 }
